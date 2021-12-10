@@ -24,12 +24,16 @@ const menuLink = () => {
 
                 if (target.classList.contains('get-nav__link_triends')) {
                     getTriends()
-                        .then(data => renderCard(data.results));
+                        .then(data => {
+                            renderCard(data.results);
+                        });
                 }
 
                 if (target.classList.contains('get-nav__link_popular-movies')) {
                     getPopular('movie')
-                        .then(data => renderCard(data.results));
+                        .then(data => {
+                            renderCard(data.results);
+                        });
                 }
 
                 if (target.classList.contains('get-nav__link_popular-tv')) {
